@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kol Odenusi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!-- header start -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/sun.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <!-- <li><a href="#">About</a></li> -->
+                    <!-- <li><a href="#">Services</a></li> -->
+                    <li><a href="https://kolawoleodenusi.substack.com/">Blog</a></li>
+                    <li><a href="https://twitter.com/iamkodenusi">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Applications Student</p>
+                <h1>Hey, I'm <span>Kol Odenusi</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- about start -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about1.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum molestiae laborum vitae, 
+                    blanditiis iusto deserunt reiciendis molestias officiis maxime voluptatem, perferendis aliquid 
+                    possimus voluptas quam non sint similique sapiente
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsum molestiae laborum vitae, 
+                    blanditiis iusto deserunt reiciendis molestias officiis maxime voluptatem, perferendis aliquid 
+                    possimus voluptas quam non sint similique sapiente.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Educaiton</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>IT Support</span><br>Networking and Customer Assistance</li>
+                            <li><span>Web Dev</span><br>Website & Web App Development</li>
+                            <li><span>Software Dev</span><br>Building Software Applicaitons</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Green Cross Pharmacy International</span><br>3+ years of Customer Support and Order and Database Management</li>
+                            <li><span>Joseph Botti and Associates</span><br>2 years of Auditing and Document management</li>
+                            <li><span>Otres Agencies</span><br>1.5 years of Helpdesk and IT/Networking Support (Internship)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Don Bosco University</span><br>Bachelors Degree in Computer Application "23 </li>
+                            <!-- <li><span>Web Dev</span><br>Web App Development</li> -->
+                            <!-- <li><span>App Dev</span><br>Building Mobile Applicaitons</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about end -->
+
+    <!-- services start -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle center-align">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <span class="material-symbols-outlined">headset_mic</span><h2>IT Helpdesk</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque maiores veritatis dicta dolorum incidun
+                    t hic aliquam doloremque rerum odit. Ad ea laboriosam p
+                    ariatur, rerum minima cupiditate temporibus quod aspernatur maxime.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                        
+                    <span class="material-symbols-outlined">code_blocks</span><h2>Web Dev</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque maiores veritatis dicta dolorum incidun
+                    t hic aliquam doloremque rerum odit. Ad ea laboriosam p
+                    ariatur, rerum minima cupiditate temporibus quod aspernatur maxime.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">laptop_windows</span><h2>Software Dev</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque maiores veritatis dicta dolorum incidun
+                    t hic aliquam doloremque rerum odit. Ad ea laboriosam p
+                    ariatur, rerum minima cupiditate temporibus quod aspernatur maxime.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services end -->
+
+    <!-- portfolio start -->
+
+<!--COMMENTED OUT THE WORK SECTION    
+    
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle center-align">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+-->
+
+<script>
+// about js start
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+// about js end
+</script>
+
+</body>
+</html>
